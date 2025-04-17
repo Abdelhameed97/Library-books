@@ -33,11 +33,11 @@ This is a powerful and dynamic **Library Web App** built with Vue 3 using the Co
 
 ---
 
-## 🖼️ UI Snapshot
+## 🖼️ Code Snapshot
 
-> _![DB Structure](./assets/screenshots/db.json.png)_
+> _![DB Structure](./src/assets/screenshot/db.json.png)_
 
-![Routes Preview](./assets/screenshots/routes.png)
+![Routes Preview](./src/assets/screenshot/routes.png)
 
 ## 🛠️ Technologies Used
 
