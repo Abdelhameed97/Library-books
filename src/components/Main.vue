@@ -17,10 +17,12 @@
             <router-link
               :to="'/bookDetails/' + book.id"
               class="book-link text-decoration-none text-dark text-center"
-              ><h5 class="card-title">{{ book.name }}</h5></router-link
+              ><h5 class="card-title text-danger mb-2 hover-icon">
+                {{ book.name }}
+              </h5></router-link
             >
-            <p class="card-text flex-grow-1">{{ book.description }}</p>
-            <div class="book-info mb-2">
+            <!-- <p class="card-text flex-grow-1">{{ book.description }}</p> -->
+            <div class="book-info mb-2 fs-5">
               <div><strong>Author:</strong> {{ book.author }}</div>
               <div><strong>Category:</strong> {{ book.category }}</div>
               <div><strong>Pages:</strong> {{ book.pages }}</div>
@@ -139,5 +141,9 @@ function addBookToCart(book) {
 .book-link:hover .book-img {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hover-icon:hover {
+  transform: scale(1.3);
 }
 </style>

@@ -35,9 +35,47 @@ This is a powerful and dynamic **Library Web App** built with Vue 3 using the Co
 
 ## 🖼️ Code Snapshot
 
-> _![DB Structure](./src/assets/screenshot/db.json.png)_
+## 🖼️ UI Snapshots
 
-![Routes Preview](./src/assets/screenshot/routes.png)
+> _![Home Page](./src/assets/screenshot/ui-snapshot/home1.png)_
+
+![Home Preview](./src/assets/screenshot/ui-snapshot/home1.png)
+
+---
+
+> _![Book Details Page](./src/assets/screenshot/ui-snapshot/bookDetails.png)_
+
+![Book Details Preview](./src/assets/screenshot/ui-snapshot/bookDetails.png)
+
+---
+
+> _![Wishlist Page](./src/assets/screenshot/ui-snapshot/wishlist.png)_
+
+![Wishlist Preview](./src/assets/screenshot/ui-snapshot/wishlist2.png)
+
+---
+
+> _![Cart Page](./src/assets/screenshot/ui-snapshot/cart0.png)_
+
+![Cart Preview](./src/assets/screenshot/ui-snapshot/cart1.png)
+
+---
+
+> _![Checkout Page](./src/assets/screenshot/ui-snapshot/checkout.png)_
+
+![Checkout Preview](./src/assets/screenshot/ui-snapshot/checkout.png)
+
+---
+
+> _![Not Found Page](./src/assets/screenshot/ui-snapshot/Not-Found.png)_
+
+![Not Found Preview](./src/assets/screenshot/ui-snapshot/Not-Found.png)
+
+## 🖼️ Code Snapshot
+
+> _![DB Structure](./src/assets/screenshot/code-snapshot/db.json.png)_
+
+![Routes Preview](./src/assets/screenshot/code-snapshot/routes.png)
 
 ## 🛠️ Technologies Used
 

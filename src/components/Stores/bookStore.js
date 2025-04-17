@@ -44,13 +44,6 @@ export const useBookStore = defineStore("bookStore", () => {
     cart.value = [];
   };
 
-  const getTotalPrice = computed(() =>
-    cart.value.reduce(
-      (total, item) => total + item.book.price * item.quantity,
-      0
-    )
-  );
-
   // 💖 Wishlist Functions
   const addToWishlist = (book) => {
     if (!wishlist.value.some((item) => item.id === book.id)) {
@@ -74,7 +67,6 @@ export const useBookStore = defineStore("bookStore", () => {
     increaseQuantity,
     decreaseQuantity,
     clearCart,
-    getTotalPrice,
     addToWishlist,
     removeFromWishlist,
     isInWishlist,

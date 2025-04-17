@@ -5,11 +5,12 @@
         <h2 class="mb-4">{{ book.bookName }}</h2>
         <img :src="book.image" alt="cover" class="book-cover mb-4" />
         <div class="text-start fs-5">
-          <p><strong>Author:</strong> {{ book.author }}</p>
-          <p><strong>Description:</strong> {{ book.description }}</p>
+          <p><strong>Book Name: </strong> {{ book.name }}</p>
+          <p><strong>Author: </strong> {{ book.author }}</p>
+          <p><strong>Description: </strong> {{ book.description }}</p>
           <p><strong>Category:</strong> {{ book.category }}</p>
-          <p><strong>Pages:</strong> {{ book.pages }}</p>
-          <p><strong>ISBN:</strong> {{ book.ISBN }}</p>
+          <p><strong>Pages: </strong> {{ book.pages }}</p>
+          <p><strong>ISBN: </strong> {{ book.ISBN }}</p>
           <p>
             <strong>Price:</strong>
             <span class="text-primary fw-bold fs-4">
@@ -80,7 +81,7 @@ const currencyFormatter = (price) => {
 
 <style scoped>
 .book-details-card {
-  max-width: 700px;
+  max-width: 80%;
   width: 100%;
   background-color: #ffffff;
 }

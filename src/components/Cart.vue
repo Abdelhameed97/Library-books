@@ -1,5 +1,5 @@
 <template>
-  <div class="container border border-2 border-primary my-5 p-5">
+  <div class="container my-5 p-5">
     <div
       class="d-flex justify-content-center align-items-center my-2"
       v-if="store.cart.length === 0"
@@ -12,9 +12,9 @@
 
     <div v-else>
       <table
-        class="table table-striped text-center table-bordered align-middle"
+        class="table table-striped text-center table-bordered align-middle w-100"
       >
-        <thead class="table-primary">
+        <thead class="table-danger">
           <tr>
             <th>Cover</th>
             <th>Book Name</th>
@@ -31,7 +31,15 @@
             <td>
               <img :src="item.book.image" alt="cover" class="book-cover" />
             </td>
-            <td>{{ item.book.bookName }}</td>
+            <td>
+              <router-link
+                class="text-decoration-none text-primary hover-link"
+                :to="'/bookDetails/' + item.book.id"
+              >
+                {{ item.book.name }}
+              </router-link>
+            </td>
+
             <td>{{ item.book.author }}</td>
             <td>{{ currencyFormatter(item.book.price) }}</td>
             <td>{{ item.quantity }}</td>
@@ -70,7 +78,7 @@
       </table>
 
       <div class="d-flex justify-content-end mt-3">
-        <router-link class="btn btn-success me-2" to="/checkout"
+        <router-link class="btn btn-outline-success me-2" to="/checkout"
           ><i class="fas fa-credit-card me-2"></i>Checkout</router-link
         >
 
@@ -83,7 +91,7 @@
 </template>
 
 <script setup>
-import { useRouter } from "vue-router";
+import { computed } from "vue";
 import { useBookStore } from "./Stores/bookStore.js";
 
 const store = useBookStore();
@@ -92,9 +100,10 @@ const currencyFormatter = (price) => {
   return `$${price.toFixed(2)}`;
 };
 
-const total = store.getTotalPrice;
+const total = computed(() =>
+  store.cart.reduce((total, item) => total + item.book.price * item.quantity, 0)
+);
 </script>
-
 <style scoped>
 .book-cover {
   width: 80px;
@@ -102,5 +111,10 @@ const total = store.getTotalPrice;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.hover-link:hover {
+  color: #00ffdd;
+  text-decoration: underline;
+  transform: scale(1.3);
 }
 </style>

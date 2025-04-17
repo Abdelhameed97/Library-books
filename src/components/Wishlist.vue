@@ -10,13 +10,12 @@
       <router-link class="btn btn-primary" to="/"
         ><i class="fas fa-book me-2"></i>Browse Books
       </router-link>
-      \
     </div>
 
     <!-- لو فيها كتب -->
     <div v-else>
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <router-link class="btn btn-outline-secondary" to="/">
+        <router-link class="btn btn-outline-success" to="/">
           <i class="fas fa-arrow-left me-2"></i>Continue Shopping
         </router-link>
         <h3><i class="fas fa-heart me-2 text-danger"></i>Your Wishlist</h3>
@@ -31,9 +30,15 @@
               :alt="book.name"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">{{ book.name }}</h5>
-              <p class="card-text flex-grow-1">{{ book.description }}</p>
-              <div class="book-info mb-2">
+              <router-link
+                :to="'/bookDetails/' + book.id"
+                class="book-link text-decoration-none text-dark text-center"
+                ><h5 class="card-title text-danger mb-2 hover-icon">
+                  {{ book.name }}
+                </h5></router-link
+              >
+              <!-- <p class="card-text flex-grow-1">{{ book.description }}</p> -->
+              <div class="book-info mb-2 fs-5">
                 <div><strong>Author:</strong> {{ book.author }}</div>
                 <div><strong>Category:</strong> {{ book.category }}</div>
                 <div>
@@ -95,5 +100,8 @@ function currencyFormatter(price) {
 .book-img {
   height: 250px;
   object-fit: cover;
+}
+.hover-icon:hover {
+  transform: scale(1.3);
 }
 </style>
