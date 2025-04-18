@@ -39,13 +39,9 @@ This is a powerful and dynamic **Library Web App** built with Vue 3 using the Co
 
 > _![Home Page](./src/assets/screenshot/ui-snapshot/home1.png)_
 
-![Home Preview](./src/assets/screenshot/ui-snapshot/home1.png)
-
 ---
 
 > _![Book Details Page](./src/assets/screenshot/ui-snapshot/bookDetails.png)_
-
-![Book Details Preview](./src/assets/screenshot/ui-snapshot/bookDetails.png)
 
 ---
 
@@ -63,13 +59,9 @@ This is a powerful and dynamic **Library Web App** built with Vue 3 using the Co
 
 > _![Checkout Page](./src/assets/screenshot/ui-snapshot/checkout.png)_
 
-![Checkout Preview](./src/assets/screenshot/ui-snapshot/checkout.png)
-
 ---
 
 > _![Not Found Page](./src/assets/screenshot/ui-snapshot/Not-Found.png)_
-
-![Not Found Preview](./src/assets/screenshot/ui-snapshot/Not-Found.png)
 
 ## 🖼️ Code Snapshot
 
